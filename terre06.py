@@ -2,14 +2,15 @@
 
 import sys
 
-if len(sys.argv) < 2:
-    print("Erreur: veuillez entrer argument valide")
-
-for argument in sys.argv [1:]:
-    if argument.isspace():
-        print("Erreur: veuillez entrer argument valide")
+try:
+    argument = sys.argv[1]
+    if len(sys.argv) > 2 or argument.isnumeric():
+        print("erreur.")
     else:
         print(argument[::-1])
+except IndexError:
+    print("erreur.")
+
 
 
 
