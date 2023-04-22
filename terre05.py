@@ -9,10 +9,8 @@ import sys
 
 for numbers in sys.argv[1:2]:
     try:
-        number1 = sys.argv[1]
-        number2 = sys.argv[2] 
-        number1 = int(number1)
-        number2 = int(number2)
+        number1 = int(sys.argv[1])
+        number2 = int(sys.argv[2])
         calcul1 = number1 / number2
         calcul2 = number1 % number2 
         if number1 < number2:
