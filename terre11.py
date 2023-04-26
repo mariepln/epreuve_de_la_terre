@@ -8,40 +8,47 @@ try:
     hh = int(hh_arg)
     mm = int(mm_arg)
 
-    def format_12h_soir(nombre):
-        heure12 = nombre - 12
-        if heure12 < 1 or heure12 > 11:
-            return None
-        return heure12
+    def format_12h_soir(hh):
+        heure12 = hh - 12
+        if 13 <= hh <= 23 :
+            return heure12
+        return None
 
-    def format_12h_matin(nombre):
-        if nombre < 1 or nombre > 12:
-            return None
-        return nombre
+    def format_12h_matin(hh):
+        if 1 <= hh <= 11:
+            return hh
+        return None
+    
+    def format_12h_midi(hh):
+        if hh == 12:
+            return hh
+        return None
 
-    def format_12h_minuit(nombre):
-        if nombre == 0:
+    def format_12h_minuit(hh):
+        if hh == 00:
             return 12
-        else:
-            return None
+        return None
     
 
     if mm > 59:
         print("les minutes de dépassent pas 59...")
     else:
-        heure12 = format_12h_soir(hh)
-        if heure12 is None:
-            heure12 = format_12h_matin(hh)
-            if heure12 is None:
-                heure12 = format_12h_minuit(hh)
-                if heure12 is None:
-                    print("veuillez indiquer un bon format")
+        if format_12h_soir(hh) is None:
+            format_12h_matin(hh)
+            if format_12h_matin(hh) is None:
+                format_12h_midi(hh)
+                if format_12h_midi(hh) is None:
+                    format_12h_minuit(hh)
+                    if format_12h_minuit(hh) is None:
+                        print("veuillez indiquer un bon format")
+                    else:
+                        print("12:{:02d}PM".format(mm))
                 else:
-                    print("{}:{:02d}PM".format(heure12, mm)) # caractère de remplissage 0, largeur 2 caractères
+                    print("{}:{:02d}AM".format(hh, mm))
             else:
-                print("{}:{:02d}PM".format(heure12, mm))
+                print("{}:{:02d}AM".format(hh, mm))
         else:
-            print("{}:{:02d}AM".format(heure12, mm))
+            print("{}:{:02d}PM".format((hh - 12), mm)) # caractère de remplissage 0, largeur 2 caractères
 
 except:
     print("erreur")
