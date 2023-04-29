@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
-#variable intégrée
+#Créez un programme qui affiche son nom de fichier.
 
-file_path = __file__
+
+file_path = __file__ #variable intégrée
 
 file_name = file_path.split("/")[-1]
 

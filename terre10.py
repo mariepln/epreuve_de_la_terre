@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+#Créez un programme qui affiche si un nombre est premier ou pas.
+#Attention : 0 et 1 ne sont pas des nombres premiers. Gérez les erreurs d’arguments.
+
 import sys
 
 try:

@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+#Créez un programme qui permet de déterminer si l’argument donné est un entier pair ou impair
+
 #vérifier qu'il y ai au moins 1 argument
 #parcourir l'argument donné et vérifier que ce soit bien un entier positif
 #renvoyer messages d'erreur si pas un entier positif
@@ -7,7 +9,7 @@
 import sys
 
 
-if len(sys.argv) == 1:
+if len(sys.argv) == 1 :
     print("Tu ne me la mettras pas à l’envers.")
 else:
     for number in sys.argv[1:]:
@@ -21,8 +23,7 @@ else:
                 print("impair")
         except:     #je choisi de renvoyer ce message pour toute erreur (j'aurais pu notre ValueError) 
             print("Tu ne me la mettras pas à l’envers.")
-    
-
+        
 
 
    

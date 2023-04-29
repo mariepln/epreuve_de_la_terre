@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+#Créez un programme qui affiche le nombre de caractères d’une chaîne de caractères passée en argument.
+
 #utilisation d'un compteur pr éviter d'utiliser len()
 
 import sys
@@ -12,9 +14,9 @@ try:
         counter_char += 1
 
     if sentence.isnumeric():
-        print("erreur.")
+        print("erreur d'argument.")
     elif len(sys.argv) > 2:
-        print("erreur.")
+        print("erreur d'argument.")
     else:
         print(counter_char) 
 except IndexError:

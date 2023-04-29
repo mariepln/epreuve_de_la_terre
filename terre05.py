@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+#Créez un programme qui affiche le résultat et le reste d’une division entre deux nombres.
+
 #créer variable pour chaque argument
 #chaque argument doit ê un entier, 
 #le résultat doit être entier, 
@@ -19,4 +21,4 @@ for numbers in sys.argv[1:2]:
             print('résultat:', int(calcul1))
             print("reste:", calcul2)
     except ZeroDivisionError: 
-        print("erreur.")
+        print("Division par 0 impossible...")

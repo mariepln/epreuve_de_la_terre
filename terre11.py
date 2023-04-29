@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+#24 o 12
+
 import sys
 
 try:

@@ -5,8 +5,6 @@ import sys
 try:
     heure_argument = sys.argv[1]
     hh_arg, mm_arg = heure_argument.split(":")
-    if not mm_arg[:-2].isdigit(): # Vérifier que les premiers caractères de mm_arg sont des chiffres
-        raise ValueError("Format d'heure invalide") 
     hh = int(hh_arg)
     mm = int(mm_arg[:-2])
     if heure_argument.endswith("AM"):
@@ -58,5 +56,7 @@ try:
         else:
             print("{}:{:02d}".format(hh + 12, mm))
 
-except:
+except IndexError:
     print("Erreur")
+except ValueError:
+    print("Format d'heure invalide")
