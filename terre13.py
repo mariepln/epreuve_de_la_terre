@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+#Créez un programme qui prend en paramètre trois entiers et affiche la valeur du milieu.
+
 import sys 
 
 try:
